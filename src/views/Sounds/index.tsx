@@ -45,7 +45,7 @@ export const Sounds = () => {
   return (
     <div class={styles.container}>
       <div class={styles.inner}>
-        <h1>BS2.0</h1>
+        <h1>BS2❤0</h1>
         {SOUNDS.map((sound) => (
           <Player audioPath={sound.path} name={sound.name} />
         ))}

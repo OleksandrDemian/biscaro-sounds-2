@@ -1,11 +1,5 @@
 import {Sounds} from "./views/Sounds";
 
-const App = () => {
-  return (
-    <div>
-      <Sounds />
-    </div>
-  );
-};
+const App = () => <Sounds />;
 
 export default App;
