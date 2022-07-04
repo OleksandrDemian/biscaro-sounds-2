@@ -10,11 +10,11 @@ export const Player = ({ name, audioPath }: PlayerProps) => {
   const onClick = () => AudioManager.play(audioPath);
 
   return (
-    <div class={styles.container}>
+    <div class={styles.container} onClick={onClick}>
       <div>
         {name}
       </div>
-      <div class={styles.playButton} onClick={onClick}>
+      <div class={styles.playButton}>
         <PlayIcon />
       </div>
     </div>
