@@ -1,0 +1,17 @@
+.categoryLink {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.header {
+    margin-bottom: 0.5rem;
+}
+
+.categoryLink:not(:first-child) {
+    margin-top: 2rem;
+}
+
+.paragraph {
+    margin: 0;
+}

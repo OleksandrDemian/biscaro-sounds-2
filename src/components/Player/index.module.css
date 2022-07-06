@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 
-.playButton {
+.iconButton {
     padding: 0.5rem;
     border-radius: 50%;
     display: flex;
@@ -18,8 +18,24 @@
     justify-content: center;
 }
 
-.playButton > svg {
+.iconButton > svg {
     width: 25px;
     height: 25px;
+}
+
+.playButton > svg {
     color: white;
+}
+
+.starButton > svg {
+    color: yellow;
+}
+
+.emptyStarButton > svg {
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5rem;
 }

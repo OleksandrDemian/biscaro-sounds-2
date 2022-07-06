@@ -35,6 +35,7 @@ import Wassim from '../assets/audio/wa/Wassim.ogg';
 export type BiscaroSoundsCategory = {
   id: string;
   name: string;
+  description: string;
   sounds: BiscaroSound[];
 };
 
@@ -46,7 +47,8 @@ export type BiscaroSound = {
 export const SOUNDS_DB: BiscaroSoundsCategory[] = [
   {
     id: 'hidden_gems',
-    name: "🧨 Bangers ™",
+    name: "🧨 Bangers™",
+    description: 'La storia',
     sounds: [
       { name: 'Agghiacciante', path: Agghiacciante },
       { name: 'Applause', path: Applause },
@@ -66,7 +68,8 @@ export const SOUNDS_DB: BiscaroSoundsCategory[] = [
   },
   {
     id: 'classics',
-    name: '🦄 Classics ™',
+    name: '🦄 Classics™',
+    description: 'I migliori audio presi dai corsi su YouTube',
     sounds: [
       { name: 'Allora', path: alloraSound },
       { name: 'Cosa è successo?', path: cesSound },
