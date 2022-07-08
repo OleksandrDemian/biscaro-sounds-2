@@ -76,3 +76,11 @@ const SOUNDS_DB: Sound[] = [
 export const getSounds = () => SOUNDS_DB;
 
 export const getSoundById = (soundId: string) => SOUNDS_DB.find((entry) => entry.id === soundId);
+
+export type SearchSoundsProps = {
+  query: string;
+}
+export const searchSounds = ({ query }: SearchSoundsProps) => {
+  const lowerQuery = query.toLowerCase();
+  return SOUNDS_DB.filter((entry) => entry.name.toLowerCase().includes(lowerQuery));
+};

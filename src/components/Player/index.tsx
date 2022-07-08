@@ -2,7 +2,7 @@ import styles from './index.module.css';
 import StartIcon from '../../assets/icons/star.svg';
 import EmptyStartIcon from '../../assets/icons/empty-star.svg';
 import {AudioManager} from "../../utils/audioManager";
-import {slist} from "../../utils/slist";
+import {clist} from "../../utils/clist";
 import {useIsFavorite} from "../../hooks/useIsFavorite";
 import {addFavorite, removeFavorite} from "../../data/favoritesDb";
 import {Sound} from "../../data/soundsDb";
@@ -30,11 +30,11 @@ export const Player = (props: Sound) => {
       </div>
       <div class={styles.buttons}>
         {isFavorite() ? (
-          <div class={slist(styles.iconButton, styles.starButton)} onClick={onUnstar}>
+          <div class={clist(styles.iconButton, styles.starButton)} onClick={onUnstar}>
             <StartIcon />
           </div>
         ) : (
-          <div class={slist(styles.iconButton, styles.emptyStarButton)} onClick={onStar}>
+          <div class={clist(styles.iconButton, styles.emptyStarButton)} onClick={onStar}>
             <EmptyStartIcon />
           </div>
         )}
