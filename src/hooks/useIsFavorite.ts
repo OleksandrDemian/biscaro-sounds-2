@@ -1,4 +1,4 @@
-import {isFavorite, listen} from "../utils/favorites";
+import {isFavorite, listen} from "../data/favoritesDb";
 import {createEffect, createSignal, onCleanup} from "solid-js";
 
 export const useIsFavorite = (id: string) => {

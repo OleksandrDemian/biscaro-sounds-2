@@ -4,26 +4,23 @@ import EmptyStartIcon from '../../assets/icons/empty-star.svg';
 import {AudioManager} from "../../utils/audioManager";
 import {slist} from "../../utils/slist";
 import {useIsFavorite} from "../../hooks/useIsFavorite";
-import {addFavorite, removeFavorite} from "../../utils/favorites";
+import {addFavorite, removeFavorite} from "../../data/favoritesDb";
+import {Sound} from "../../data/soundsDb";
 
-export type PlayerProps = {
-  audioPath: string;
-  name: string;
-};
-export const Player = (props: PlayerProps) => {
-  const { isFavorite } = useIsFavorite(props.audioPath);
-  const onPlay = () => AudioManager.play(props.audioPath);
+export const Player = (props: Sound) => {
+  const { isFavorite } = useIsFavorite(props.id);
+  const onPlay = () => AudioManager.play(props.path);
 
   const onStar = (e: MouseEvent) => {
     e.stopPropagation();
     e.preventDefault();
-    addFavorite(props.audioPath);
+    addFavorite(props.id);
   };
 
   const onUnstar = (e: MouseEvent) => {
     e.stopPropagation();
     e.preventDefault();
-    removeFavorite(props.audioPath);
+    removeFavorite(props.id);
   }
 
   return (

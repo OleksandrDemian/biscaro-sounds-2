@@ -32,63 +32,47 @@ import Pronti_alla_routine from '../assets/audio/wa/Pronti alla routine.ogg';
 import Stronger from '../assets/audio/wa/Stronger.ogg';
 import Wassim from '../assets/audio/wa/Wassim.ogg';
 
-export type BiscaroSoundsCategory = {
-  id: string;
-  name: string;
-  description: string;
-  sounds: BiscaroSound[];
-};
-
-export type BiscaroSound = {
+export type Sound = {
   name: string;
   path: string;
+  id: string;
 };
 
-export const SOUNDS_DB: BiscaroSoundsCategory[] = [
-  {
-    id: 'hidden_gems',
-    name: "🧨 Bangers™",
-    description: 'La storia',
-    sounds: [
-      { name: 'Agghiacciante', path: Agghiacciante },
-      { name: 'Applause', path: Applause },
-      { name: 'Ce labbiamo fatta', path: Ce_labbiamo_fatta },
-      { name: 'Complotto', path: Complotto },
-      { name: 'Cri cri', path: Cri_cri },
-      { name: 'Dai che si parte', path: Dai_che_si_parte },
-      { name: 'Hai paura', path: Hai_paura },
-      { name: 'Musichetta 1', path: Musichetta_1 },
-      { name: 'Pazzesco', path: Pazzesco },
-      { name: 'Per PHP ripassare JSP', path: Per_PHP_ripassare_JSP },
-      { name: 'Pronotato', path: Pronotato },
-      { name: 'Pronti alla routine', path: Pronti_alla_routine },
-      { name: 'Stronger', path: Stronger },
-      { name: 'Wassim', path: Wassim },
-    ]
-  },
-  {
-    id: 'classics',
-    name: '🦄 Classics™',
-    description: 'I migliori audio presi dai corsi su YouTube',
-    sounds: [
-      { name: 'Allora', path: alloraSound },
-      { name: 'Cosa è successo?', path: cesSound },
-      { name: 'Copia incolla', path: ciSound },
-      { name: 'Ciao', path: ciaoSound },
-      { name: 'E', path: eSound },
-      { name: 'Eccolo qua', path: eqSound },
-      { name: 'Il ++ incrementa il valore di una variabile', path: ipiivduvSound },
-      { name: 'Il problema fondamentale del essere umano', path: iudpfdeuSound },
-      { name: 'Tra puntatori e vettori è un vero amore?', path: mtpevevaSound },
-      { name: 'Affascinante', path: netqaaSound },
-      { name: 'Proviamo', path: proviamoSound },
-      { name: 'Questo qui', path: qqSound },
-      { name: 'Quindi', path: quindiSound },
-      { name: 'Un endl', path: ueSound },
-      { name: 'cout', path: uicSound },
-      { name: 'Arma potentisssssima', path: uuapSound },
-      { name: 'Video brutti per tutti', path: uvvbptSound },
-      { name: 'Vediamo', path: vediamoSound },
-    ],
-  }
+const SOUNDS_DB: Sound[] = [
+  { id: "alloraSound", name: 'Allora', path: alloraSound },
+  { id: "cesSound", name: 'Cosa è successo?', path: cesSound },
+  { id: "ciSound", name: 'Copia incolla', path: ciSound },
+  { id: "ciaoSound", name: 'Ciao', path: ciaoSound },
+  { id: "eSound", name: 'E', path: eSound },
+  { id: "eqSound", name: 'Eccolo qua', path: eqSound },
+  { id: "ipiivduvSound", name: 'Il ++ incrementa il valore di una variabile', path: ipiivduvSound },
+  { id: "iudpfdeuSound", name: 'Il problema fondamentale del essere umano', path: iudpfdeuSound },
+  { id: "mtpevevaSound", name: 'Tra puntatori e vettori è un vero amore?', path: mtpevevaSound },
+  { id: "netqaaSound", name: 'Affascinante', path: netqaaSound },
+  { id: "proviamoSound", name: 'Proviamo', path: proviamoSound },
+  { id: "qqSound", name: 'Questo qui', path: qqSound },
+  { id: "quindiSound", name: 'Quindi', path: quindiSound },
+  { id: "ueSound", name: 'Un endl', path: ueSound },
+  { id: "uicSound", name: 'cout', path: uicSound },
+  { id: "uuapSound", name: 'Arma potentisssssima', path: uuapSound },
+  { id: "uvvbptSound", name: 'Video brutti per tutti', path: uvvbptSound },
+  { id: "vediamoSound", name: 'Vediamo', path: vediamoSound },
+  { id: "Agghiacciante", name: 'Agghiacciante', path: Agghiacciante },
+  { id: "Applause", name: 'Applause', path: Applause },
+  { id: "Ce_labbiamo_fatta", name: 'Ce labbiamo fatta', path: Ce_labbiamo_fatta },
+  { id: "Complotto", name: 'Complotto', path: Complotto },
+  { id: "Cri_cri", name: 'Cri cri', path: Cri_cri },
+  { id: "Dai_che_si_parte", name: 'Dai che si parte', path: Dai_che_si_parte },
+  { id: "Hai_paura", name: 'Hai paura', path: Hai_paura },
+  { id: "Musichetta_1", name: 'Musichetta 1', path: Musichetta_1 },
+  { id: "Pazzesco", name: 'Pazzesco', path: Pazzesco },
+  { id: "Per_PHP_ripassare_JSP", name: 'Per PHP ripassare JSP', path: Per_PHP_ripassare_JSP },
+  { id: "Pronotato", name: 'Pronotato', path: Pronotato },
+  { id: "Pronti_alla_routine", name: 'Pronti alla routine', path: Pronti_alla_routine },
+  { id: "Stronger", name: 'Stronger', path: Stronger },
+  { id: "Wassim", name: 'Wassim', path: Wassim },
 ];
+
+export const getSounds = () => SOUNDS_DB;
+
+export const getSoundById = (soundId: string) => SOUNDS_DB.find((entry) => entry.id === soundId);

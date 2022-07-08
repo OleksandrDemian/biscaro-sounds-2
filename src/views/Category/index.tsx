@@ -19,7 +19,7 @@ export const Category = () => {
     <List>
       <h2>{category.name}</h2>
       {category.sounds.map((sound) => (
-        <Player audioPath={sound.path} name={sound.name} />
+        <Player {...sound} />
       ))}
     </List>
   )

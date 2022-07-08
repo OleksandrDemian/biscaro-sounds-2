@@ -29,6 +29,7 @@ export const listen = (l: FavoritesListener) => {
 };
 
 export const addFavorite = (id: string) => {
+  console.log(id)
   favorites.push(id);
   localStorage.setItem(KEY, JSON.stringify(favorites));
   listeners.forEach((l) => l.onUpdate(favorites));

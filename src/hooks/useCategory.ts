@@ -1,9 +1,14 @@
 import {createMemo} from "solid-js";
-import {SOUNDS_DB} from "../data/soundsDb";
+import { getCategoryById } from "../data/categoriesDb";
+import { getSoundsByCategory } from "../data/categorySounds";
 
 export const useCategory = (id: string) => {
   const category = createMemo(() => {
-    return SOUNDS_DB.find((category) => category.id === id);
+    const cat = getCategoryById(id);
+    return {
+      name: cat?.name,
+      sounds: getSoundsByCategory(id),
+    };
   });
 
   return category();

@@ -7,8 +7,7 @@ export type LayoutProps = {
 export const Layout = (props: LayoutProps) => (
   <div class={styles.container}>
     <div class={styles.inner}>
-      <h1 class={styles.header}>🐱 BS2❤0.2</h1>
-      <p>The sounds of our lives</p>
+      <h1 class={styles.header}>Biscaro sounds</h1>
       <div style={{ flex: 1 }}>
         {props.children}
       </div>
