@@ -23,6 +23,7 @@ const CATEGORY_SOUNDS_DB: CategorySound[] = [
   { soundId: "uuapSound", categoryId: "classics" },
   { soundId: "uvvbptSound", categoryId: "classics" },
   { soundId: "vediamoSound", categoryId: "classics" },
+  { soundId: "adunata", categoryId: "bangers" },
   { soundId: "Agghiacciante", categoryId: "bangers" },
   { soundId: "Applause", categoryId: "bangers" },
   { soundId: "Ce_labbiamo_fatta", categoryId: "bangers" },

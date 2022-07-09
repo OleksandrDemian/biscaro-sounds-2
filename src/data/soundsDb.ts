@@ -31,6 +31,7 @@ import Pronotato from '../assets/audio/wa/Pronotato.ogg';
 import Pronti_alla_routine from '../assets/audio/wa/Pronti alla routine.ogg';
 import Stronger from '../assets/audio/wa/Stronger.ogg';
 import Wassim from '../assets/audio/wa/Wassim.ogg';
+import Adunata from '../assets/audio/wa/Adunata.ogg';
 
 export type Sound = {
   name: string;
@@ -71,6 +72,7 @@ const SOUNDS_DB: Sound[] = [
   { id: "Pronti_alla_routine", name: 'Pronti alla routine', path: Pronti_alla_routine },
   { id: "Stronger", name: 'Stronger', path: Stronger },
   { id: "Wassim", name: 'Wassim', path: Wassim },
+  { id: "adunata", name: 'Adunata', path: Adunata },
 ];
 
 export const getSounds = () => SOUNDS_DB;
